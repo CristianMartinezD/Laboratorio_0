@@ -5,6 +5,7 @@ using namespace std;
 
 
 void ejercicio0(){
+    system("cls");
 
     int n;
     cout<<"Ingresa el numero base: "; cin>>n;
@@ -17,11 +18,13 @@ void ejercicio0(){
         cout<<endl;
     }
     cout<<"\n\nEse es el resultado del ejercicio del ejemplo.\n\n";
+    system("pause");
 }
 
 
 
 void ejercicio1(){
+    system("cls");
 
     int n;
     cout<<"Ingresa el numero base: "; cin>>n;
@@ -43,11 +46,13 @@ void ejercicio1(){
         cout<<endl;
     }
     cout<<"\n\nEse es el resultado del ejercicio 1.\n\n";
+    system("pause");
 }
 
 
 
 void ejercicio2(){
+    system("cls");
 
     int numero;
     cout<<"Ingreasa un numero entero: "; cin>>numero;
@@ -66,6 +71,7 @@ void ejercicio2(){
 
     cout<<"\n\nLa suma da: "<<suma<<"\n";
     cout<<"\n\nEse es el resultado del ejercicio 2.\n\n";
+    system("pause");
 }
 
 
