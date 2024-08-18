@@ -3,12 +3,38 @@
 using namespace std;
 
 
+int obtener_entero(){
+
+    string numero_en_texto;
+    string NUMEROS = "1234567890";
+    int validador = 0;
+    cout<<"Ingresa el numero entero: "; cin>>numero_en_texto;
+
+    while (validador < numero_en_texto.length())
+    {
+        for (int i = 0; i < numero_en_texto.length(); i++)
+        {
+
+            if (NUMEROS.find(numero_en_texto[i]) != string::npos) {
+                validador += 1;
+            } else{
+                cout<<"Ingresa un numero valido: "; cin>>numero_en_texto;
+                validador = 0;
+                break;
+            }
+        }
+        if (validador != 0) validador += 1;
+    }
+    return stoi(numero_en_texto);
+
+}
+
+
 
 void ejercicio0(){
     system("cls");
 
-    int n;
-    cout<<"Ingresa el numero base: "; cin>>n;
+    int n = obtener_entero();
 
     for(int fila=1; fila <= n; fila++){
         for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*"; //Este for imprime tantos asteriscos como indique el el valor de fila.
@@ -17,7 +43,7 @@ void ejercicio0(){
 
         cout<<endl;
     }
-    cout<<"\n\nEse es el resultado del ejercicio del ejemplo.\n\n";
+    cout<<"\nEse es el resultado del ejercicio del ejemplo.\n\n";
     system("pause");
 }
 
@@ -26,8 +52,7 @@ void ejercicio0(){
 void ejercicio1(){
     system("cls");
 
-    int n;
-    cout<<"Ingresa el numero base: "; cin>>n;
+    int n = obtener_entero();
 
     for(int fila=1; fila <= n; fila++){
         for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*"; //Este for imprime tantos asteriscos como indique el el valor de fila.
@@ -45,7 +70,7 @@ void ejercicio1(){
 
         cout<<endl;
     }
-    cout<<"\n\nEse es el resultado del ejercicio 1.\n\n";
+    cout<<"\nEse es el resultado del ejercicio 1.\n\n";
     system("pause");
 }
 
@@ -54,8 +79,8 @@ void ejercicio1(){
 void ejercicio2(){
     system("cls");
 
-    int numero;
-    cout<<"Ingreasa un numero entero: "; cin>>numero;
+    int numero = obtener_entero();
+
     if (numero < 0) numero = -1*numero;
 
     int digito;
@@ -70,7 +95,7 @@ void ejercicio2(){
     }
 
     cout<<"\n\nLa suma da: "<<suma<<"\n";
-    cout<<"\n\nEse es el resultado del ejercicio 2.\n\n";
+    cout<<"\nEse es el resultado del ejercicio 2.\n\n";
     system("pause");
 }
 
