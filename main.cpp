@@ -88,8 +88,10 @@ void ejercicio0(){
 
     for(int fila=1; fila <= N; fila++){
         for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*"; //Este for imprime tantos asteriscos como indique el el valor de fila.
-        for (int espacios=1; espacios <= (N-fila)*2; espacios++) cout<<" "; // Este for imprime (n-fila)*2 espacios en cada iteración.
-        for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*";
+        for (int espacios=1; espacios < (N-fila)*2; espacios++) cout<<" "; // Este for imprime (n-fila)*2 espacios en cada iteración.
+        for (int asterisco=1; asterisco <= fila; asterisco++){
+            if(asterisco !=N) cout<<"*";
+        }
 
         cout<<endl;
     }
@@ -112,8 +114,10 @@ void ejercicio1(){
 
     for(int fila=1; fila <= N; fila++){
         for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*"; //Este for imprime tantos asteriscos como indique el el valor de fila.
-        for (int espacios=1; espacios <= (N-fila)*2; espacios++) cout<<" "; // Este for imprime (n-fila)*2 espacios en cada iteración.
-        for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*";
+        for (int espacios=1; espacios < (N-fila)*2; espacios++) cout<<" "; // Este for imprime (n-fila)*2 espacios en cada iteración.
+        for (int asterisco=1; asterisco <= fila; asterisco++){
+            if(asterisco !=N) cout<<"*";
+        }
 
         cout<<endl;
     }
@@ -121,7 +125,7 @@ void ejercicio1(){
 
     for (int fila=N-1; fila>=1; fila--){
         for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*";
-        for (int espacios=1; espacios <= (N-fila)*2; espacios++) cout<<" ";
+        for (int espacios=1; espacios < (N-fila)*2; espacios++) cout<<" ";
         for (int asterisco=1; asterisco <= fila; asterisco++) cout<<"*";
 
         cout<<endl;
